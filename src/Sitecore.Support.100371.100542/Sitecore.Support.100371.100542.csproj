@@ -48,14 +48,6 @@
       <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.8.0.5\lib\Sitecore.ExperienceAnalytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Api">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Api.8.0.5\lib\Sitecore.ExperienceAnalytics.Api.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Core">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.8.0.5\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\packages\SC.Sitecore.Kernel.8.0.5\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>

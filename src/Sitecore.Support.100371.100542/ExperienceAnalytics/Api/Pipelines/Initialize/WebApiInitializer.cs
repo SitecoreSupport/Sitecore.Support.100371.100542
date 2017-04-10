@@ -12,14 +12,16 @@ namespace Sitecore.Support.ExperienceAnalytics.Api.Pipelines.Initialize
     {
         public void Process(PipelineArgs args)
         {
-            var logger = ApiContainer.GetLogger();
-            logger.Info("WebApiInitializer", this);
-            GlobalConfiguration.Configuration.Routes.MapHttpRoute("AnalyticsDataApiSupport", "sitecore/api/ao/aggregates/{site}/{segments}/{keys}", new
+            ApiContainer.GetLogger().Info("WebApiInitializer", this);
+            HttpRouteCollectionExtensions.MapHttpRoute(GlobalConfiguration.Configuration.Routes,"AnalyticsDataApiSupport", "sitecore/api/ao/aggregates/{site}/{segments}/{keys}", new
             {
                 controller = "AnalyticsDataSupport",
                 action = "GetSupport"
-            }, new { keys = "^[^.]+$" });
-            ApiContainer.Configuration.GetWebApiConfiguration(logger).Configure(GlobalConfiguration.Configuration);
+            }, new
+            {
+                keys = "^[^.]+$"
+            });
+            ApiContainer.Configuration.GetWebApiConfiguration().Configure(GlobalConfiguration.Configuration);
         }
     }
 }
