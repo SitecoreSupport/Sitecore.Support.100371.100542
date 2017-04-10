@@ -40,40 +40,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.Cintel, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Cintel.8.2.2\lib\Sitecore.Cintel.dll</HintPath>
+    <Reference Include="Sitecore.Cintel">
+      <HintPath>..\packages\SC.Sitecore.Cintel.8.0.5\lib\Sitecore.Cintel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.8.2.2\lib\Sitecore.ExperienceAnalytics.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceAnalytics">
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.8.0.5\lib\Sitecore.ExperienceAnalytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Api, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Api.8.2.2\lib\Sitecore.ExperienceAnalytics.Api.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceAnalytics.Api">
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Api.8.0.5\lib\Sitecore.ExperienceAnalytics.Api.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.8.2.2\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceAnalytics.Core">
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.8.0.5\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\SC.Sitecore.Kernel.8.2.2\lib\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.Kernel.8.0.5\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http">
-      <HintPath>..\packages\SC.System.Net.Http.8.1.0\lib\System.Net.Http.dll</HintPath>
+      <HintPath>..\packages\SC.System.Net.Http.8.0.5\lib\System.Net.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.System.Web.Http.8.2.2\lib\System.Web.Http.dll</HintPath>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\SC.System.Web.Http.8.0.5\lib\System.Web.Http.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.System.Web.Http.WebHost.8.2.2\lib\System.Web.Http.WebHost.dll</HintPath>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\SC.System.Web.Http.WebHost.8.0.5\lib\System.Web.Http.WebHost.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml" />
