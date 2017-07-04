@@ -26,7 +26,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\Instances\Patch3sc82u1\Website\bin\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -64,6 +64,10 @@
       <HintPath>..\packages\SC.Sitecore.Kernel.8.2.1\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.Xdb.Configuration">
+      <HintPath>..\packages\SC.Sitecore.Xdb.Configuration.8.2.1\lib\Sitecore.Xdb.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -87,6 +91,7 @@
     <Compile Include="Cintel\Endpoint\Plumbing\AggregateViewSupportController.cs" />
     <Compile Include="Cintel\Endpoint\Plumbing\InitializeRoutes.cs" />
     <Compile Include="Cintel\Endpoint\Plumbing\IntelSupportController.cs" />
+    <Compile Include="ExperienceAnalytics\Api\Http\ModelBinding\ReportQueryModelBinder.cs" />
     <Compile Include="ExperienceAnalytics\Api\Pipelines\Initialize\AnalyticsDataSupportController.cs" />
     <Compile Include="ExperienceAnalytics\Api\Pipelines\Initialize\WebApiInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

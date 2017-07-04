@@ -8,23 +8,17 @@
 
     public class WebApiInitializer
     {
-        private readonly ILogger logger;
-
-        public WebApiInitializer(ILogger logger)
-        {
-            this.logger = logger;
-        }
-
         public void Process(PipelineArgs args)
         {
-            logger.Info("WebApiInitializer", this);
+            ApiContainer.GetLogger().Info("WebApiInitializer", this);
+
             HttpRouteCollectionExtensions.MapHttpRoute(GlobalConfiguration.Configuration.Routes, "AnalyticsDataApiSupport", "sitecore/api/ao/aggregates/{site}/{segments}/{keys}", new
             {
                 controller = "AnalyticsDataSupport",
                 action = "GetSupport"
             }, new { keys = "^[^.]+$" });
-            
-            ApiContainer.Configuration.GetWebApiConfiguration(logger).Configure(GlobalConfiguration.Configuration);
+
+            ApiContainer.Configuration.GetWebApiConfiguration().Configure(GlobalConfiguration.Configuration);
         }
     }
 }

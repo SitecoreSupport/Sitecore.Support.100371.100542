@@ -10,6 +10,8 @@
     using Sitecore.ExperienceAnalytics.Api.Query;
     using Sitecore.ExperienceAnalytics.Api.Response;
     using Sitecore.ExperienceAnalytics.Core.Diagnostics;
+    using Sitecore.Support.ExperienceAnalytics.Api.Http.ModelBinding;
+    using Sitecore.Xdb.Configuration;
     using System;
     using System.Net;
     using System.Net.Http;
@@ -40,7 +42,7 @@
             this.encoder = encoder;
         }
 
-        [ValidateModelStateFilter, ContextSiteSwicherFilter(SiteName = "shell")]
+        [RequirexDbFilter, ValidateModelStateFilter, ContextSiteSwicherFilter(SiteName = "shell")]
         public IHttpActionResult GetSupport([ModelBinder(typeof(ReportQueryModelBinder))] ReportQuery reportQuery)
         {
             try
@@ -109,52 +111,7 @@
             {
             }
         }
-
-        internal class ReportQueryModelBinder : IModelBinder
-        {
-            private readonly int keyTopDefaultValue;
-            private readonly ILogger logger;
-            private readonly IDecoder<string> textDecoder;
-
-            public ReportQueryModelBinder()
-                : this(Config.KeysTopDefault, ApiContainer.GetKeyCodec(), ApiContainer.GetLogger())
-            {
-            }
-
-            public ReportQueryModelBinder(int keyTopDefaultValue, IDecoder<string> textDecoder, ILogger logger)
-            {
-                if (textDecoder == null)
-                {
-                    throw new ArgumentNullException("textDecoder");
-                }
-                if (logger == null)
-                {
-                    throw new ArgumentNullException("logger");
-                }
-                this.keyTopDefaultValue = keyTopDefaultValue;
-                this.textDecoder = textDecoder;
-                this.logger = logger;
-            }
-
-            public bool BindModel(HttpActionContext actionContext, ModelBindingContext bindingContext)
-            {
-                if (bindingContext.ModelType != typeof(ReportQuery))
-                {
-                    return false;
-                }
-                Type[] types = new Type[] { typeof(int), typeof(IDecoder<string>), typeof(ILogger) };
-                ConstructorInfo constructor = typeof(IParameterBinder).Assembly.GetType("Sitecore.ExperienceAnalytics.Api.Http.ModelBinding.ReportQueryModelBinder").GetConstructor(types);
-                if (constructor != null)
-                {
-                    object[] parameters = new object[] { this.keyTopDefaultValue, this.textDecoder, this.logger };
-                    object obj2 = constructor.Invoke(parameters);
-                    object[] objArray2 = new object[] { actionContext, bindingContext };
-                    bindingContext.Model = obj2.GetType().GetMethod("GetModelFromBindingContext", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(obj2, objArray2);
-                }
-                return true;
-            }
-        }
-
+               
         internal class ValidateModelStateFilterAttribute : ActionFilterAttribute
         {
             public override void OnActionExecuting(HttpActionContext actionContext)
@@ -162,6 +119,68 @@
                 if (!actionContext.ModelState.IsValid)
                 {
                     actionContext.Response = HttpRequestMessageExtensions.CreateErrorResponse(actionContext.Request, HttpStatusCode.BadRequest, actionContext.ModelState);
+                }
+            }
+        }
+
+        internal class RequirexDbFilterAttribute : ActionFilterAttribute
+        {
+            private readonly ILogger logger;
+            private readonly AnalyticsDataSupportController.IXDbSettings settings;
+
+            public RequirexDbFilterAttribute()
+                : this(new AnalyticsDataSupportController.XDbSettings(), Logger.Instance)
+            {
+            }
+
+            public RequirexDbFilterAttribute(AnalyticsDataSupportController.IXDbSettings settings, ILogger logger)
+            {
+                this.settings = settings;
+                this.logger = logger;
+            }
+
+            public override void OnActionExecuting(HttpActionContext actionContext)
+            {
+                if (!this.settings.Enabled)
+                {
+                    this.logger.Info("Access to Experience Analytics denied because xDB is not enabled", this);
+                    actionContext.Response = new HttpResponseMessage(HttpStatusCode.Forbidden);
+                }
+            }
+        }
+
+        internal interface IXDbSettings
+        {
+            bool Enabled { get; }
+
+            bool HasValidLicense { get; }
+
+            string XdbDisabledUrl { get; }
+        }
+
+        internal sealed class XDbSettings : AnalyticsDataSupportController.IXDbSettings
+        {
+            public bool Enabled
+            {
+                get
+                {
+                    return XdbSettings.Enabled;
+                }
+            }
+
+            public bool HasValidLicense
+            {
+                get
+                {
+                    return XdbSettings.HasValidLicense;
+                }
+            }
+
+            public string XdbDisabledUrl
+            {
+                get
+                {
+                    return XdbSettings.XdbDisabledUrl;
                 }
             }
         }
