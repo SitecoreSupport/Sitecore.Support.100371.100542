@@ -50,6 +50,11 @@
       <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.8.2.1\lib\Sitecore.ExperienceAnalytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.ExperienceAnalytics.Aggregation, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Aggregation.8.2.1\lib\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.ExperienceAnalytics.Api, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Api.8.2.1\lib\Sitecore.ExperienceAnalytics.Api.dll</HintPath>
@@ -91,8 +96,8 @@
     <Compile Include="Cintel\Endpoint\Plumbing\AggregateViewSupportController.cs" />
     <Compile Include="Cintel\Endpoint\Plumbing\InitializeRoutes.cs" />
     <Compile Include="Cintel\Endpoint\Plumbing\IntelSupportController.cs" />
+    <Compile Include="ExperienceAnalytics\Api\Http\AnalyticsDataSupportController.cs" />
     <Compile Include="ExperienceAnalytics\Api\Http\ModelBinding\ReportQueryModelBinder.cs" />
-    <Compile Include="ExperienceAnalytics\Api\Pipelines\Initialize\AnalyticsDataSupportController.cs" />
     <Compile Include="ExperienceAnalytics\Api\Pipelines\Initialize\WebApiInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
