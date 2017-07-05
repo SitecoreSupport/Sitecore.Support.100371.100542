@@ -19,7 +19,7 @@
     {
       this.logger.Info("WebApiInitializer", this);
 
-      ///// Fix issue////////
+      ///// Mapping rewritten AnalyticsData controller ////////
       HttpRouteCollectionExtensions.MapHttpRoute(GlobalConfiguration.Configuration.Routes, "AnalyticsDataApiSupport", "sitecore/api/ao/aggregates/{site}/{segments}/{keys}", new
       {
         controller = "AnalyticsDataSupport",

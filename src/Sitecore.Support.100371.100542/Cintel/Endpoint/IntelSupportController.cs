@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Support.Cintel.Endpoint.Plumbing
+﻿namespace Sitecore.Support.Cintel.Endpoint
 {
   using Sitecore.Cintel;
   using Sitecore.Cintel.Commons;

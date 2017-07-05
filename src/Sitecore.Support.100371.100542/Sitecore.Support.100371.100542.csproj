@@ -93,9 +93,9 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cintel\Endpoint\Plumbing\AggregateViewSupportController.cs" />
+    <Compile Include="Cintel\Endpoint\AggregateViewSupportController.cs" />
     <Compile Include="Cintel\Endpoint\Plumbing\InitializeRoutes.cs" />
-    <Compile Include="Cintel\Endpoint\Plumbing\IntelSupportController.cs" />
+    <Compile Include="Cintel\Endpoint\IntelSupportController.cs" />
     <Compile Include="ExperienceAnalytics\Api\Http\AnalyticsDataSupportController.cs" />
     <Compile Include="ExperienceAnalytics\Api\Http\ModelBinding\ReportQueryModelBinder.cs" />
     <Compile Include="ExperienceAnalytics\Api\Pipelines\Initialize\WebApiInitializer.cs" />

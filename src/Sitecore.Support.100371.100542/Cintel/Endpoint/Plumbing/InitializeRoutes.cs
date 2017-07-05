@@ -10,7 +10,7 @@
   {
     public override void Process(PipelineArgs args)
     {
-      ///// Fix issue ////////
+      ///// Mapping rewritten AggregateView and Intel controllers ////////
       RouteCollectionExtensions.MapHttpRoute(RouteTable.Routes, "cintel_aggregate_views_support", "sitecore/api/ao/v1/aggregates/{viewId}", new
       {
         controller = "AggregateViewSupport",
