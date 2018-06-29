@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sitecore.Support</RootNamespace>
     <AssemblyName>Sitecore.Support.100371.100542</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -40,37 +40,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.Cintel, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.Cintel">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.Sitecore.Cintel.8.2.1\lib\Sitecore.Cintel.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.Cintel.9.0.0\lib\Sitecore.Cintel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.ExperienceAnalytics">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.8.2.1\lib\Sitecore.ExperienceAnalytics.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.9.0.0\lib\Sitecore.ExperienceAnalytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Aggregation, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.ExperienceAnalytics.Aggregation">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Aggregation.8.2.1\lib\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Aggregation.9.0.0\lib\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Api, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.ExperienceAnalytics.Api">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Api.8.2.1\lib\Sitecore.ExperienceAnalytics.Api.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Api.9.0.0\lib\Sitecore.ExperienceAnalytics.Api.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.ExperienceAnalytics.Core">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.8.2.1\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.9.0.0\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\SC.Sitecore.Kernel.8.2.1\lib\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.Kernel.9.0.0\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Xdb.Configuration">
-      <HintPath>..\packages\SC.Sitecore.Xdb.Configuration.8.2.1\lib\Sitecore.Xdb.Configuration.dll</HintPath>
+      <HintPath>..\packages\SC.Sitecore.Xdb.Configuration.9.0.0\lib\Sitecore.Xdb.Configuration.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -79,14 +79,14 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.System.Web.Http.8.2.1\lib\System.Web.Http.dll</HintPath>
+      <HintPath>..\packages\SC.System.Web.Http.9.0.0\lib\System.Web.Http.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http.WebHost">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SC.System.Web.Http.WebHost.8.2.1\lib\System.Web.Http.WebHost.dll</HintPath>
+      <HintPath>..\packages\SC.System.Web.Http.WebHost.9.0.0\lib\System.Web.Http.WebHost.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml" />
